@@ -2,7 +2,16 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import DrawerItems from "./main-sidebar-items";
 
-export default function Sidebar(props:any) {
+interface SidebarProps {
+  handleDrawerToggle:any;
+  mobileOpen:boolean;
+  container:any;
+  drawerWidth:string;
+}
+
+
+export default function Sidebar(props: SidebarProps) {
+
   const { handleDrawerToggle, mobileOpen, container, drawerWidth } = props;
 
   return (

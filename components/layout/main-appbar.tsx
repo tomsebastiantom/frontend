@@ -13,7 +13,13 @@ import ViewModuleIcon from "@mui/icons-material/ViewModule";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-export default function Appbar(props:any) {
+interface AppbarProps { 
+  handleDrawerToggle: any;
+  drawerWidth:string;
+}
+
+
+export default function Appbar(props:AppbarProps) {
   const { handleDrawerToggle, drawerWidth } = props;
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
   const handleCloseUserMenu = () => {

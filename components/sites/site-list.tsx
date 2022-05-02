@@ -4,7 +4,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { Site } from '../../ts/interfaces/site';
 
-interface Props{
+interface SiteListProps{
   sites: Site[];
   toggleSiteDetails(site:Site, pageNo:number, toggle:boolean): any;
   page: number;
@@ -13,7 +13,7 @@ interface Props{
 }
 
 
-export default function SiteList( props:Props) {
+export default function SiteList( props:SiteListProps) {
   const { page, pageSize, handleChange, sites, toggleSiteDetails } = props;
   
   return (

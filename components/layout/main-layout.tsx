@@ -7,10 +7,11 @@ import PropTypes from "prop-types";
 
 interface MainLayoutProps {
   children?: ReactNode;
+  window?: any;
 }
 
-export default function MainLayout(props:any) {
-  const { window, children } = props;
+export default function MainLayout(props:MainLayoutProps) {
+  const { children,window } = props;
   
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
 
@@ -24,7 +25,7 @@ export default function MainLayout(props:any) {
   return (
     <>
       <Box sx={{ display: "flex" }}>
-        <Appbar handleDrawerToggle={handleDrawerToggle} />
+        <Appbar handleDrawerToggle={handleDrawerToggle} drawerWidth="240px" />
 
         <Sidebar
           handleDrawerToggle={handleDrawerToggle}

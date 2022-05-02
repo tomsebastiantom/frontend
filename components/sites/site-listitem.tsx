@@ -2,12 +2,13 @@ import { Typography, Box, Grid, IconButton } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Site } from '../../ts/interfaces/site';
 
-interface Props {
+interface SiteListItemProps {
   site: Site;
   toggleSiteDetails(site:Site, pageNo:number, toggle:boolean): any;
   page: number;
 }
-export default function SiteListItem(props:Props) {
+
+export default function SiteListItem(props:SiteListItemProps) {
   const { site, toggleSiteDetails, page } = props;
   return (
     <Box sx={{ display: "flex", p: 2, border: 1 }}>

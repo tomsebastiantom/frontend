@@ -6,13 +6,13 @@ import EmailIcon from "@mui/icons-material/Email";
 import RoomIcon from "@mui/icons-material/Room";
 import { Site } from '../../ts/interfaces/site';
 
-interface Props {
+interface SiteDetailsProps {
   site: Site;
   toggleSiteDetails(site:Site, pageNo:number, toggle:boolean): any;
   page: number;
 }
 
-export default function SiteDetails(props:Props): JSX.Element {
+export default function SiteDetails(props:SiteDetailsProps): JSX.Element {
   const { site, toggleSiteDetails, page } = props;
   return (
     <>

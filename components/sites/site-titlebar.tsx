@@ -5,10 +5,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 
-interface Props {
+interface SiteTitlebarProps {
   handleTagChange (event: React.ChangeEvent<HTMLSelectElement>):any ;
 }
-export default function SiteTitlebar(props:Props) {
+
+export default function SiteTitlebar(props:SiteTitlebarProps) {
   const { handleTagChange } = props;
   return (
     <>
